@@ -3,51 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Baki Berkay Yilmaz - Home</title>
+    <title>Baki Berkay Yilmaz — ECE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
-    <div class="sidebar">
-        <img src="images/img1.png" alt="Baki Yilmaz" class="sidebar-img">
-        <h1>Baki Berkay Yilmaz</h1>
-        <p>Assistant Professor, Wayne State University</p>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="projects.html">Projects</a>
-            <a href="phd_positions.html">Open Positions</a>
+
+<nav id="navbar">
+    <div class="nav-name">Baki Berkay Yilmaz</div>
+    <ul class="nav-links">
+        <li><a href="#" class="active" onclick="showSection('home', this); return false;">Home</a></li>
+        <li><a href="#" onclick="showSection('research', this); return false;">Research</a></li>
+        <li><a href="#" onclick="showSection('projects', this); return false;">Projects</a></li>
+        <li><a href="#" onclick="showSection('positions', this); return false;">Open Positions</a></li>
+    </ul>
+</nav>
+
+<!-- ══════════════════════════════ HOME ══════════════════════════════ -->
+<section id="home" class="active">
+    <div class="home-hero">
+        <div class="hero-left">
+            <div class="hero-photo-wrap fade-up delay-1">
+                <img src="images/img1.png" alt="Baki Berkay Yilmaz"
+                     onerror="this.outerHTML='<div class=\'photo-placeholder\'>B·B·Y</div>'">
+            </div>
+            <div class="hero-left-text">
+                <p class="hero-quote fade-up delay-2">"Our true mentor in life is science."</p>
+                <p class="hero-quote-attr fade-up delay-2">— Mustafa Kemal Atatürk</p>
+                <div class="hero-links fade-up delay-3">
+                    <a href="https://scholar.google.com/citations?user=PFGP8ssAAAAJ&hl=en&oi=ao" target="_blank">
+                        <span class="link-dot"></span> Google Scholar
+                    </a>
+                    <a href="https://www.linkedin.com/in/bakiberkayyilmaz/" target="_blank">
+                        <span class="link-dot"></span> LinkedIn
+                    </a>
+                    <a href="mailto:baki@wayne.edu">
+                        <span class="link-dot"></span> baki@wayne.edu
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="section-label fade-up delay-1">Portfolio</div>
+            <h1 class="hero-name fade-up delay-2">Baki Berkay<br><em>Yilmaz</em></h1>
+            <p class="hero-title fade-up delay-2">Assistant Professor &middot; Wayne State University &middot; ECE</p>
+            <div class="divider fade-up delay-3"></div>
+            <p class="bio-text fade-up delay-3">
+                I received my Ph.D. in Electrical and Computer Engineering from the Georgia Institute of Technology.
+                I joined Aether Argus Inc. in 2020 as a Lead Signal Processing Engineer and Researcher, and currently
+                serve as an Assistant Professor of Electrical and Computer Engineering at Wayne State University.
+            </p>
+            <p class="bio-text fade-up delay-4">
+                My research interests span electromagnetic side-channel analysis, signal processing, hardware security,
+                communications, and machine learning. Our team focuses on enhancing supply chain security through
+                non-intrusive methodologies leveraging EM side-channels.
+            </p>
+
+            <div class="edu-section fade-up delay-4">
+                <h2>Education</h2>
+                <div class="edu-items">
+                    <div class="edu-item">
+                        <div class="edu-badge"></div>
+                        <div>
+                            <div class="edu-inst">Georgia Institute of Technology</div>
+                            <div class="edu-degree">PhD in Electrical and Computer Engineering</div>
+                            <div class="edu-loc">Atlanta, GA</div>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-badge"></div>
+                        <div>
+                            <div class="edu-inst">Georgia Institute of Technology</div>
+                            <div class="edu-degree">MS in Electrical and Computer Engineering</div>
+                            <div class="edu-loc">Atlanta, GA</div>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-badge"></div>
+                        <div>
+                            <div class="edu-inst">Koç University</div>
+                            <div class="edu-degree">MS in Electrical and Electronics Engineering</div>
+                            <div class="edu-loc">Istanbul, Türkiye</div>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-badge"></div>
+                        <div>
+                            <div class="edu-inst">Koç University</div>
+                            <div class="edu-degree">BS in Electrical and Electronics Engineering</div>
+                            <div class="edu-loc">Istanbul, Türkiye</div>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-badge"></div>
+                        <div>
+                            <div class="edu-inst">Koç University</div>
+                            <div class="edu-degree">BS in Industrial Engineering</div>
+                            <div class="edu-loc">Istanbul, Türkiye</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════ RESEARCH ══════════════════════════════ -->
+<section id="research">
+    <div class="page-header fade-up delay-1">
+        <div class="section-label">Academic Output</div>
+        <h1 class="page-title">Research &amp; <em>Publications</em></h1>
+    </div>
+
+    <div class="research-tabs">
+        <button class="rtab active" onclick="showTab('honors')">Honors</button>
+        <button class="rtab" onclick="showTab('patents')">Patents</button>
+        <button class="rtab" onclick="showTab('grants')">Grants</button>
+        <button class="rtab" onclick="showTab('journals')">Journals</button>
+        <button class="rtab" onclick="showTab('conferences')">Conferences</button>
+    </div>
+
+    <!-- Honors -->
+    <div class="rtab-content active" id="tab-honors">
+        <div class="honors-list">
+            <div class="honor-item fade-up delay-1">
+                <div class="honor-star">★</div>
+                <div class="honor-text"><b>Best Paper Award</b>, IEEE International Symposium on Hardware Oriented Security and Trust (HOST), 2020.</div>
+            </div>
+            <div class="honor-item fade-up delay-2">
+                <div class="honor-star">★</div>
+                <div class="honor-text"><b>Best Paper Nominee</b>, 26th IEEE International Symposium on High-Performance Computer Architecture (HPCA-26), 2020.</div>
+            </div>
+            <div class="honor-item fade-up delay-3">
+                <div class="honor-star">★</div>
+                <div class="honor-text">Recipient of the Scientific and Technological Research Council of Turkey (TUBITAK) Graduate Scholarship.</div>
+            </div>
+            <div class="honor-item fade-up delay-4">
+                <div class="honor-star">★</div>
+                <div class="honor-text">Received the Koç University Graduate Scholarship for Master's studies.</div>
+            </div>
+            <div class="honor-item fade-up delay-4">
+                <div class="honor-star">★</div>
+                <div class="honor-text">Awarded a Full Undergraduate Scholarship from Koç University for academic excellence.</div>
+            </div>
         </div>
     </div>
 
-    <div class="content">
-        <div class="quote">
-            <b>Our true mentor in life is science.</b><br>
-            -- Mustafa Kemal Ataturk
-        </div>
-
-        <div class="card">
-            <h2>About Me</h2>
-            <p>I received my Ph.D. in Electrical and Computer Engineering from the Georgia Institute of Technology. I joined Aether Argus Inc. in 2020 as a Lead Signal Processing Engineer and Researcher. I currently serve as an Assistant Professor of Electrical and Computer Engineering at Wayne State University. My research interests include electromagnetic side-channel analysis, signal processing, hardware security, communications, and machine learning.</p>
-            <p>Currently, our team is dedicated to enhancing supply chain security by developing non-intrusive, non-destructive methodologies that leverage EM side-channels. Although we lack control over the power of the emitted signals, we work to maximize the reliability and accuracy of our approach.</p>
-        </div>
-
-        <div class="card">
-            <h2>Education</h2>
-            <p><b>Georgia Institute of Technology,</b> Atlanta, GA<br>PhD in Electrical and Computer Engineering</p>
-            <p><b>Georgia Institute of Technology,</b> Atlanta, GA<br>MS in Electrical and Computer Engineering</p>
-            <p><b>Koc University,</b> Istanbul, TURKIYE<br>MS in Electrical and Electronics Engineering</p>
-            <p><b>Koc University,</b> Istanbul, TURKIYE<br>BS in Electrical and Electronics Engineering</p>
-            <p><b>Koc University,</b> Istanbul, TURKIYE<br>BS in Industrial Engineering</p>
-        </div>
-
-        <div class="card">
-            <h2>Links</h2>
-            <p><a href="https://scholar.google.com/citations?user=PFGP8ssAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> | 
-               <a href="https://www.linkedin.com/in/bakiberkayyilmaz/" target="_blank">LinkedIn</a> | 
-               <a href="mailto:baki@wayne.edu">E-mail</a></p>
+    <!-- Patents -->
+    <div class="rtab-content" id="tab-patents">
+        <div class="grant-list">
+            <div class="grant-item fade-up delay-1">
+                <div class="grant-num">Patent · US App. 18/027,517</div>
+                <div class="grant-title">Method and System to Identify Fabricated Electrical Circuits with Hidden Hardware Modifications</div>
+                <div class="grant-meta">Alenka Zajic, Milos Prvulovic, <b>Baki Berkay Yilmaz</b>, and Ngoc Luong Nguyen</div>
+            </div>
         </div>
     </div>
+
+    <!-- Grants -->
+    <div class="rtab-content" id="tab-grants">
+        <div class="grant-list">
+            <div class="grant-item fade-up delay-1">
+                <div class="grant-num">Grant 01</div>
+                <span class="grant-role">PI</span>
+                <div class="grant-title">Electromagnetic Side Channel Monitoring Study for Requisition 235390</div>
+                <div class="grant-meta">Fluor Marine Propulsion Corporation &mdash; June 2021 – October 2021</div>
+            </div>
+            <div class="grant-item fade-up delay-2">
+                <div class="grant-num">Grant 02</div>
+                <span class="grant-role">co-PI</span>
+                <div class="grant-title">EMSCALe: Component Decomposition by Leveraging Electromagnetic Side-channels</div>
+                <div class="grant-meta">DARPA, W912CG-23-C-0015 &mdash; March 2023 – September 2024</div>
+            </div>
+            <div class="grant-item fade-up delay-3">
+                <div class="grant-num">Grant 03</div>
+                <span class="grant-role">PI</span>
+                <div class="grant-title">ArEMGuard: Mobile Infrastructure Authentication in Expeditionary Regions via Unintended Electromagnetic Emission Monitoring</div>
+                <div class="grant-meta">DARPA, N66001-23-C-4035 &mdash; March 2023 – March 2025</div>
+            </div>
+            <div class="grant-item fade-up delay-4">
+                <div class="grant-num">Grant 04</div>
+                <span class="grant-role">PI</span>
+                <div class="grant-title">EMAth: ECU Authentication via Electromagnetic Side Channels</div>
+                <div class="grant-meta">DARPA, 140D04-24-C-0026 &mdash; January 2024 – January 2026</div>
+            </div>
+            <div class="grant-item fade-up delay-4">
+                <div class="grant-num">Grant 05</div>
+                <span class="grant-role">co-PI</span>
+                <div class="grant-title">EMSentry — Making Mobile Infrastructure Secure in Expeditionary Regions: An Air-gapped Monitoring Approach Leveraging EM Side-Channels</div>
+                <div class="grant-meta">DARPA, HR0011-24-9-0505 &mdash; August 2024 – February 2026</div>
+            </div>
+            <div class="grant-item fade-up delay-4">
+                <div class="grant-num">Grant 06</div>
+                <span class="grant-role">co-PI</span>
+                <div class="grant-title">MEDAGuard: Medical Device Functionality Shielding against Adverse Effects of Authorized Updates by Leveraging EM Side-Channels</div>
+                <div class="grant-meta">ARPA-H &mdash; Under Contracting Process</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Journals — loaded from journals.html -->
+    <div class="rtab-content" id="tab-journals">
+        <p class="pub-loading">Loading...</p>
+    </div>
+
+    <!-- Conferences — loaded from conferences.html -->
+    <div class="rtab-content" id="tab-conferences">
+        <p class="pub-loading">Loading...</p>
+    </div>
+</section>
+
+<!-- ══════════════════════════════ PROJECTS ══════════════════════════════ -->
+<section id="projects">
+    <div class="page-header fade-up delay-1">
+        <div class="section-label">Research &amp; Engineering</div>
+        <h1 class="page-title">Selected <em>Projects</em></h1>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card fade-up delay-1">
+            <div class="project-number">01</div>
+            <h2 class="project-title">EM Side-Channel Based System Monitoring and Profiling with Neural Networks</h2>
+            <ul class="project-points">
+                <li>Designed and trained neural networks to profile programs on IoT devices by exploiting electromagnetic signals emitted during execution.</li>
+                <li>Detected malware by identifying anomalies in program behavior using EM side-channel data.</li>
+                <li>Achieved non-intrusive classification of circuit components without direct physical access.</li>
+                <li>Collected data using Software-Defined Radios (SDRs) and spectrum analyzers for high-quality signal acquisition.</li>
+            </ul>
+        </div>
+        <div class="project-card fade-up delay-2">
+            <div class="project-number">02</div>
+            <h2 class="project-title">Channel Modelling and Instruction Tracking</h2>
+            <ul class="project-points">
+                <li>Developed models to understand and analyze input signals leading to EM emissions during software activity.</li>
+                <li>Constructed instruction-specific EM signal models for different devices.</li>
+                <li>Demonstrated instruction-level tracking of scripts using advanced signal processing techniques.</li>
+            </ul>
+        </div>
+        <div class="project-card fade-up delay-3">
+            <div class="project-number">03</div>
+            <h2 class="project-title">Quantifying Information Leakage Caused by Software Activities</h2>
+            <ul class="project-points">
+                <li>Analyzed and quantified potential information leakage from computing devices caused by software activity.</li>
+                <li>Demonstrated correlation between instruction sequence, implementation, and extent of leakage.</li>
+                <li>Established mathematical bounds on information leakage as a theoretical framework for mitigation.</li>
+                <li>Bridged conventional communication systems with covert/side channels to understand security impact.</li>
+            </ul>
+        </div>
+        <div class="project-card fade-up delay-4">
+            <div class="project-number">04</div>
+            <h2 class="project-title">OpenSSL Cryptography Vulnerability Analysis</h2>
+            <ul class="project-points">
+                <li>Applied advanced signal-processing techniques to extract sensitive information from EM emissions during OpenSSL signing operations.</li>
+                <li>Identified and disclosed cryptographic vulnerabilities to strengthen resistance to EM side-channel attacks.</li>
+                <li>Proposed countermeasures to mitigate EM-based threats.</li>
+            </ul>
+        </div>
+        <div class="project-card fade-up delay-1">
+            <div class="project-number">05</div>
+            <h2 class="project-title">Compressed Equalization</h2>
+            <ul class="project-points">
+                <li>Developed compressed equalization techniques exploiting hidden sparsity in combined channel responses for improved signal reconstruction.</li>
+                <li>Derived error bounds between actual and estimated combined channels.</li>
+                <li>Verified approach with MATLAB simulations for fractionally and time-spaced scenarios.</li>
+            </ul>
+        </div>
+        <div class="project-card fade-up delay-2">
+            <div class="project-number">06</div>
+            <h2 class="project-title">Bounded Component Analysis</h2>
+            <ul class="project-points">
+                <li>Developed novel BCA methods to separate dependent and independent sources from instantaneous mixtures.</li>
+                <li>Validated algorithms through MATLAB simulations, achieving effective source separation in real-world scenarios.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════ OPEN POSITIONS ══════════════════════════════ -->
+<section id="positions">
+    <div class="page-header fade-up delay-1">
+        <div class="section-label">Join the Lab</div>
+        <h1 class="page-title">Open <em>Positions</em></h1>
+    </div>
+
+    <div class="positions-grid">
+        <div class="pos-card intro-card fade-up delay-1">
+            <div class="pos-card-label">Overview</div>
+            <div class="pos-card-title">PhD Positions Available</div>
+            <p style="font-size:18px; line-height:1.85; color:#2a2520;">
+                We are seeking motivated PhD students interested in cutting-edge research at the intersection of
+                hardware security, machine learning, signal processing, and side-channel analysis techniques.
+                Fully-funded positions are available for exceptional candidates.
+            </p>
+        </div>
+
+        <div class="pos-card fade-up delay-2">
+            <div class="pos-card-label">Research Areas</div>
+            <div class="pos-card-title">What You'll Work On</div>
+            <ul class="pos-list">
+                <li>Hardware Security &amp; Supply Chain Security</li>
+                <li>Side-Channel Analysis (Electromagnetic, Power, etc.)</li>
+                <li>Machine Learning for Hardware Security</li>
+                <li>Signal Processing for Security Applications</li>
+                <li>Compressive Sensing</li>
+            </ul>
+        </div>
+
+        <div class="pos-card fade-up delay-3">
+            <div class="pos-card-label">Ideal Background</div>
+            <div class="pos-card-title">What We're Looking For</div>
+            <ul class="pos-list">
+                <li>Degree in ECE, Computer Engineering, or Computer Science</li>
+                <li>Experience in Signal Processing or Machine Learning</li>
+                <li>Background in Hardware Security or Computer Architecture</li>
+                <li>Programming skills in Python, MATLAB, or C/C++</li>
+                <li>Experience with FPGA or embedded systems</li>
+                <li>Hands-on experience with SDRs, Spectrum Analyzers, or Oscilloscopes (highly desirable)</li>
+            </ul>
+        </div>
+
+        <div class="pos-card full-width fade-up delay-4">
+            <div class="pos-card-label">Application</div>
+            <div class="pos-card-title">How to Apply</div>
+            <p style="font-size:17px; color:rgba(245,241,235,0.7); margin-bottom:20px;">
+                Send the following materials directly via email. Applications are reviewed on a rolling basis.
+            </p>
+            <div class="apply-docs">
+                <span class="apply-doc-tag">CV / Resume</span>
+                <span class="apply-doc-tag">Transcript</span>
+                <span class="apply-doc-tag">Statement of Research Interests</span>
+            </div>
+            <a href="mailto:baki@wayne.edu" class="apply-email">
+                <span class="link-dot"></span>
+                baki@wayne.edu
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>&copy; 2026 Baki B. Yilmaz — All rights reserved.</footer>
+
+<script>
+    // Shrink nav on scroll
+    window.addEventListener('scroll', function() {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Switch main sections
+    function showSection(id, linkEl) {
+        document.querySelectorAll('section').forEach(function(s) {
+            s.classList.remove('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(function(a) {
+            a.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+        if (linkEl) { linkEl.classList.add('active'); }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        retrigger(id);
+    }
+
+    // Switch research sub-tabs
+    function showTab(name) {
+        document.querySelectorAll('.rtab-content').forEach(function(el) {
+            el.classList.remove('active');
+        });
+        document.querySelectorAll('.rtab').forEach(function(btn) {
+            btn.classList.remove('active');
+            if (btn.getAttribute('onclick') === "showTab('" + name + "')") {
+                btn.classList.add('active');
+            }
+        });
+        document.getElementById('tab-' + name).classList.add('active');
+
+        // Lazy-load journals or conferences on first open
+        if (name === 'journals' || name === 'conferences') {
+            loadFragment(name);
+        } else {
+            retrigger('tab-' + name);
+        }
+    }
+
+    // Fetch and inject an HTML fragment (once only)
+    var loaded = {};
+    function loadFragment(name) {
+        var container = document.getElementById('tab-' + name);
+        if (loaded[name]) {
+            retrigger('tab-' + name);
+            return;
+        }
+        var file = name + '.html';
+        fetch(file)
+            .then(function(res) {
+                if (!res.ok) { throw new Error('Could not load ' + file); }
+                return res.text();
+            })
+            .then(function(html) {
+                container.innerHTML = html;
+                loaded[name] = true;
+                retrigger('tab-' + name);
+            })
+            .catch(function(err) {
+                container.innerHTML = '<p style="color:var(--muted);font-family:\'Syne\',sans-serif;font-size:13px;">Could not load ' + file + '. Make sure the file is in the same folder as index.html.</p>';
+                console.error(err);
+            });
+    }
+
+    // Re-trigger fade-up animations
+    function retrigger(id) {
+        var el = document.getElementById(id);
+        if (!el) { return; }
+        el.querySelectorAll('.fade-up').forEach(function(node) {
+            node.style.animation = 'none';
+            node.offsetHeight; // force reflow
+            node.style.animation = '';
+        });
+    }
+</script>
 </body>
 </html>
